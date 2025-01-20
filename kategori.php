@@ -57,6 +57,28 @@ include '.includes/toast_notification.php';
                         </td>
                     </tr>
                     <!-- modal untuk hapus data kategori -->
+                     <div class="modal fade" id="deleteCategory_<?= $category['categoy_id']; ?>" tabindex="-1" aria-hidden="tue">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-tittle">Hapus Kategori</h5>
+                                    <button type="button" class="btn-close" data-bs-dissmiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="proses_kategori.php" method="POST">
+                                        <div>
+                                            <p>Tindakan ini tidak bisa dibatalkan.</p>
+                                            <input type="hidden" name="catID" value="<?=$category['category_id']; ?>">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-outline-secondary" data-bs-dissmiss="modal">Batal</button>
+                                            <button type="submit" name="delete" class="btn btn-pimary">Hapus</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
 
                     <!-- modal untuk update data kategori -->
                     
