@@ -44,5 +44,16 @@
     <script src="assets/vendor/libs/summernote/summernote.js" defer></script>
     <!-- Active State JS -->
     <script src="assets/js/active-state-nav.js"></script>
+    <!-- Import JS jQuery and DataTables -->
+     <script src="https://code.jquery.com/query-3.6.0.min.js"></script>
+     <script src="http://cdn.datatables.net/2.2.1/js/dataTables.min.js"></script>
+     <script 
+     src="https://cdn.datatables.net/2.2.1/js/dataTables.min.js">
+    </script>
+    <script>
+      $(document).ready(function () {
+        $('#exampleTable').DataTable(); //Mengaktifkan DataTables pada table dengan id "exampleTable"
+      });
+    </script>
 </body>
 </html>

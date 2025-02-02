@@ -12,6 +12,8 @@ include "init_session.php";
     <meta name="viewport" content="width=device-width,
     initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
+    <link rel ="stylesheet"
+    href="https://cdn.datatables.net/2.2.1/css/dataTables.dataTables.min.css">
 
     <title>Dashboard &mdash; IdeKreatif</title>
     <!-- Favicon -->
