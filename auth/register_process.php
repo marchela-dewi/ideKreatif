@@ -4,22 +4,23 @@ require_once("../config.php");
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $usename = $_POST["username"];
+    $username = $_POST["username"];
     $name = $_POST["name"];
     $password = $_POST["password"];
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO users (username, name, password) VAlUES ('$username', '$name', '$$hashedPassword')";
+    $sql = "INSERT INTO users (username, name, password) 
+    VALUES ('$username', '$name', '$$hashedPassword')";
     if ($conn->query($sql) === TRUE) {
         // Simpan notifikasi ke dalam session
         $_SESSION['notification'] = [
             'type' => 'primary',
-            'massage' => 'Registrasi Berhasil!'
+            'message' => 'Registrasi Berhasil!'
         ];
     } else {
         $_SESSION['notification'] = [
             'type' => 'danger',
-            'massage' => 'Gagal Registrasi: ' . mysqli_error($conn)
+            'message' => 'Gagal Registrasi: ' . mysqli_error($conn)
         ];
     }
     header('Location: login.php');

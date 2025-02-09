@@ -2,12 +2,12 @@
 
 // Konfigurasi koneksi database
 $host = "localhost"; // Nama host server database
-$usename = "root"; // Username untuk akses database
+$username = "root"; // Username untuk akses database
 $password = ""; // Password untuk akses database
-$database = "ideKreatif"; // Nama database yang digunakan
+$database = "idekreatif"; // Nama database yang digunakan
 
 // Membuat koneksi ke database menggunakan MySQLi
-$conn = mysqli_connect($host, $usename, $password, $database);
+$conn = mysqli_connect($host, $username, $password, $database);
 
 // mengecek apakah koneksi berhasil
 if ($conn->connect_error) {
