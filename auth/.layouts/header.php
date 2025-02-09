@@ -5,13 +5,16 @@ $notification = $_SESSION['notification'] ?? null;
 if ($notification) {
   unset($_SESSION['notification']);
 }
+
+
+// Kode HTML lainnya
 /*
 jika user sudah login sesuai dengan username atau role maka akan diarahkan ke URL: dashboard.php
 */
 if (isset($_SESSION["username"]) || isset($_SESSION["role"])) {
   $_SESSION['notification'] = [
     'type' => 'danger',
-    'massage' => 'Silahkan Logout Terlebih Dahulu!'
+    'message' => 'Silahkan Logout Terlebih Dahulu!'
   ];
   header('location: ../dashboard.php');
 }

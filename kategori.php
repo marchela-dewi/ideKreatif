@@ -1,7 +1,7 @@
 <?php
-// Memamsukkan header halaman
+// Memasukkan header halaman
 include '.includes/header.php';
-// Menyertakan filr untuk menampilkan notifikasi (jika ada)
+// Menyertakan file untuk menampilkan notifikasi (jika ada)
 include '.includes/toast_notification.php';
 ?>
 

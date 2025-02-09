@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             'message' => 'Username atau Password Salah'
         ];
     }
-
+        // Redirect kembali ke halaman login jika gagal
         header('Location: login.php');
         exit();
     }
